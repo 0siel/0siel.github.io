@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osiel Alejandro Rubio Suárez | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <!-- Header[cite: 2] -->
+    <header class="navbar">
+        <div class="avatar">OARS</div>
+        <nav>
+            <a href="#about">Home / About</a>
+            <a href="#projects">Projects</a>
+            <a href="#knowledge">Knowledge</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section[cite: 2] -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">About</h2>
+            <h1 class="personal-intro">Osiel Alejandro Rubio Suárez</h1>
+            <p class="professional-intro">Software Engineer specializing in backend microservices architecture, relational databases, and solid software design.</p>
+        </section>
+
+        <!-- Projects Carousel Section[cite: 2] -->
+        <section id="projects" class="project-section">
+            <div class="section-header">
+                <h2 class="section-title">Projects Carousel</h2>
+                <div class="carousel-controls">
+                    <button id="prev-btn">Prev Project</button>
+                    <button id="next-btn">Next Project</button>
+                </div>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <a href="#" class="project-link">
+                        <div class="project-image-placeholder">Medical Appointments System</div>
+                    </a>
+                    <h3 class="project-title">Medical Appointment Microservices</h3>
+                    <p class="project-description">A distributed healthcare system utilizing Eureka discovery and API Gateway. Configured with msv-pacientes, appointments on port 8082, and doctors on port 8081.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <a href="#" class="project-link">
+                        <div class="project-image-placeholder">Hotel Reservation Platform</div>
+                    </a>
+                    <h3 class="project-title">Hotel Reservation Microservices</h3>
+                    <p class="project-description">A multi-service backend handling hotel bookings, integrated with an Angular frontend utilizing reactive signals for dynamic data table management.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Microservices</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <a href="#" class="project-link">
+                        <div class="project-image-placeholder">La Pluma Papelería POS</div>
+                    </a>
+                    <h3 class="project-title">Inventory & POS Architecture</h3>
+                    <p class="project-description">Custom point-of-sale and inventory software architecture designed for a retail business, featuring a robust relational database schema and scalable operational strategies.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Architecture</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">System Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Section[cite: 2] -->
+        <section id="knowledge" class="knowledge-section">
+            <h2 class="section-title">Knowledge</h2>
+            
+            <div class="skill-grid">
+                <!-- 9 Expandable Skill Cards[cite: 2] -->
+                <div class="skill-card">
+                    <button class="expand-btn">Backend Dev</button>
+                    <div class="skill-content">Java, Spring Boot, Hibernate, RESTful APIs.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Relational DBs</button>
+                    <div class="skill-content">PostgreSQL, Oracle Database, MySQL, SQL Server.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Frontend Dev</button>
+                    <div class="skill-content">Angular, Next.js, React, TypeScript, Tailwind CSS.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Cloud & DevOps</button>
+                    <div class="skill-content">Docker, Git, GitHub, Maven, AWS.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Architecture</button>
+                    <div class="skill-content">Microservices, API Gateway, Eureka, OpenFeign.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">NoSQL DBs</button>
+                    <div class="skill-content">MongoDB document storage and retrieval.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Programming</button>
+                    <div class="skill-content">Java, Python, C, TypeScript, JavaScript.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Algorithms</button>
+                    <div class="skill-content">Data structures, hash maps, two-pointer techniques.</div>
+                </div>
+                <div class="skill-card">
+                    <button class="expand-btn">Hardware</button>
+                    <div class="skill-content">ESP32 microcontrollers, Mobile Hardware Repair.</div>
+                </div>
+            </div>
+
+            <!-- Education Block[cite: 2] -->
+            <div class="education-card">
+                <h3 class="education-title">Education</h3>
+                <p class="education-institution">Universidad Autónoma de Querétaro</p>
+                <p class="education-degree">Software Engineering (Jul 2021 - Dec 2025)</p>
+            </div>
+        </section>
+
+        <!-- Contact Section[cite: 2] -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-links">
+                <a href="https://github.com" target="_blank" class="contact-btn">Github</a>
+                <a href="https://linkedin.com" target="_blank" class="contact-btn">Linkedin</a>
+                <a href="cv.pdf" download class="contact-btn">Download CV</a>
+                <a href="https://wa.me/1234567890" target="_blank" class="contact-btn">Whatsapp Message</a>
+                <a href="mailto:email@example.com" class="contact-btn">mail to</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer[cite: 2] -->
+    <footer class="site-footer">
+        <p>Portfolio Footer © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
