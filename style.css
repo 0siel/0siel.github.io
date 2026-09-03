@@ -70,6 +70,7 @@ header, section, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .avatar {
@@ -81,9 +82,21 @@ header, section, footer {
     border: 2px solid var(--border-color);
 }
 
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 nav a {
@@ -121,6 +134,8 @@ button:hover {
     margin-bottom: 15px;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .carousel-controls {
@@ -147,6 +162,8 @@ button:hover {
     border: 2px solid var(--border-color);
     margin-bottom: 15px;
     font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
 }
 
 .skill-tag {
@@ -241,4 +258,96 @@ button:hover {
     background-color: var(--color-accent-teal);
     color: var(--color-white);
     border-color: var(--border-color);
+}
+
+/* ==============================
+   RESPONSIVE — Tablet (≤ 768px)
+   ============================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        border-top: 2px solid var(--border-color);
+        margin-top: 10px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a,
+    nav button {
+        width: 100%;
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+    }
+
+    nav a:last-of-type {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .personal-intro {
+        font-size: 1.5rem;
+    }
+
+    .professional-intro {
+        font-size: 1rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image-placeholder {
+        height: 200px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ==============================
+   RESPONSIVE — Phone (≤ 480px)
+   ============================== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header, section, footer {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .personal-intro {
+        font-size: 1.25rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-image-placeholder {
+        height: 150px;
+        font-size: 1rem;
+    }
 }
