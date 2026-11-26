@@ -30,13 +30,16 @@ const translations = {
         btn_prev: "<",
         btn_next: ">",
 
-        proj1_img: "Incredible Project",
-        proj1_title: "Incredible Project",
-        proj1_desc: "Construction in progress...",
+        proj1_img: "Hotel Booking Web App",
+        proj1_title: "Hotel Booking Web App",
+        proj1_desc: "Demo hotel website where visitors browse rooms and events, sign up and book online (1 to 3 nights, with availability check and total calculation) and download a PDF receipt with a QR code. A REST API with JWT roles (customer, staff, admin) lets staff manage rooms, events and tasks. Deployed on AWS: React on S3 and CloudFront, Flask API on EC2 behind the same domain.",
+        proj_demo: "Live demo",
+        proj_repo_web: "Frontend repo",
+        proj_repo_api: "API repo",
 
-        proj2_img: "Fabulous Project",
-        proj2_title: "Fabulous Project",
-        proj2_desc: "Strarting on port 8080...",
+        proj2_img: "Bus Ticket Booking",
+        proj2_title: "Bus Ticket Booking",
+        proj2_desc: "Web platform to book bus tickets: passengers browse trips, pick up to 3 seats on an interactive 30-seat map and place their order online. Seats are held temporarily with Redis and released automatically after 5 minutes, so two people can never book the same seat. NestJS REST API with JWT sessions in httpOnly cookies, PostgreSQL, and a Docker Compose deployment on EC2 behind Caddy with HTTPS. Demo project: no real payments, and the ID upload is not validated, so please don't upload real documents.",
 
         proj3_img: "Amazing Project",
         proj3_title: "Amazing Project",
@@ -103,13 +106,16 @@ const translations = {
         btn_prev: "<",
         btn_next: ">",
 
-        proj1_img: "Proyecto Increible",
-        proj1_title: "Proyecto Increible",
-        proj1_desc: "En construccion...",
+        proj1_img: "Web de Reservas de Hotel",
+        proj1_title: "Web de Reservas de Hotel",
+        proj1_desc: "Sitio demo de un hotel donde los visitantes conocen habitaciones y eventos, se registran y reservan en línea (de 1 a 3 noches, con validación de disponibilidad y cálculo del total) y descargan un comprobante en PDF con código QR. Una API REST con roles JWT (cliente, staff, administrador) permite al personal gestionar habitaciones, eventos y tareas. Desplegado en AWS: React en S3 y CloudFront, API Flask en EC2 bajo el mismo dominio.",
+        proj_demo: "Ver demo",
+        proj_repo_web: "Repo frontend",
+        proj_repo_api: "Repo API",
 
-        proj2_img: "Proyecto Espectacular",
-        proj2_title: "Proyecto Espectacular",
-        proj2_desc: "Compilando...",
+        proj2_img: "Reserva de Boletos de Autobús",
+        proj2_title: "Reserva de Boletos de Autobús",
+        proj2_desc: "Plataforma web para reservar boletos de autobús: el pasajero consulta viajes, elige hasta 3 asientos en un mapa interactivo de 30 lugares y registra su compra en línea. Los asientos se bloquean temporalmente con Redis y se liberan solos a los 5 minutos, evitando que dos personas reserven el mismo. API REST en NestJS con sesión JWT en cookie httpOnly, PostgreSQL y despliegue con Docker Compose en EC2 detrás de Caddy con HTTPS. Proyecto de demostración: no procesa pagos reales y la verificación de identidad no valida el documento, así que no subas documentos reales.",
 
         proj3_img: "Proyecto Asombroso",
         proj3_title: "Proyecto Asombroso",
@@ -224,6 +230,7 @@ function showSlide(index) {
     // Instantly cut to the next slide (no transitions)
     slides.forEach(slide => slide.classList.remove('active'));
     slides[index].classList.add('active');
+    if (typeof scalePreviews === 'function') scalePreviews();
 }
 
 nextBtn.addEventListener('click', () => {
@@ -273,6 +280,25 @@ document.getElementById('cert-prev-btn').addEventListener('click', () => {
 
 window.addEventListener('resize', renderCerts);
 renderCerts();
+
+// ======================
+// Live Project Previews (scaled iframes)
+// ======================
+function scalePreviews() {
+    document.querySelectorAll('.project-preview').forEach(box => {
+        const w = Number(box.dataset.w);
+        const h = Number(box.dataset.h);
+        const screen = box.querySelector('.project-screen');
+        const scale = screen.clientWidth / w;
+        if (!scale) return;
+        screen.style.height = (h * scale) + 'px';
+        screen.querySelector('iframe').style.transform = 'scale(' + scale + ')';
+    });
+}
+
+window.addEventListener('resize', scalePreviews);
+window.addEventListener('load', scalePreviews);
+scalePreviews();
 
 // ======================
 // Hamburger Menu (Mobile)
