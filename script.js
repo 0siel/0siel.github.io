@@ -41,9 +41,10 @@ const translations = {
         proj2_title: "Bus Ticket Booking",
         proj2_desc: "Web platform to book bus tickets: passengers browse trips, pick up to 3 seats on an interactive 30-seat map and place their order online. Seats are held temporarily with Redis and released automatically after 5 minutes, so two people can never book the same seat. NestJS REST API with JWT sessions in httpOnly cookies, PostgreSQL, and a Docker Compose deployment on EC2 behind Caddy with HTTPS. Demo project: no real payments, and the ID upload is not validated, so please don't upload real documents.",
 
-        proj3_img: "Amazing Project",
-        proj3_title: "Amazing Project",
-        proj3_desc: "Loading dependencies...",
+        proj3_img: "Seven Habits",
+        proj3_title: "Seven Habits",
+        proj3_desc: "Interactive web app for learning and personal development with content, games and practical tools on habits, strategic thinking and professional skills: the seven habits with games, problem-solving models (SWOT, Six Thinking Hats, CATWDA), a FAANG mind map and flashcards. Single-page app deployed on Vercel.",
+        proj_repo: "Repository",
 
         tag_microservices: "Microservices",
         tag_architecture: "Architecture",
@@ -117,9 +118,10 @@ const translations = {
         proj2_title: "Reserva de Boletos de Autobús",
         proj2_desc: "Plataforma web para reservar boletos de autobús: el pasajero consulta viajes, elige hasta 3 asientos en un mapa interactivo de 30 lugares y registra su compra en línea. Los asientos se bloquean temporalmente con Redis y se liberan solos a los 5 minutos, evitando que dos personas reserven el mismo. API REST en NestJS con sesión JWT en cookie httpOnly, PostgreSQL y despliegue con Docker Compose en EC2 detrás de Caddy con HTTPS. Proyecto de demostración: no procesa pagos reales y la verificación de identidad no valida el documento, así que no subas documentos reales.",
 
-        proj3_img: "Proyecto Asombroso",
-        proj3_title: "Proyecto Asombroso",
-        proj3_desc: "Cargando dependencias...",
+        proj3_img: "Seven Habits",
+        proj3_title: "Seven Habits",
+        proj3_desc: "Aplicación web interactiva de aprendizaje y desarrollo personal con contenidos, juegos y herramientas sobre hábitos, pensamiento estratégico y habilidades profesionales: los siete hábitos con juegos, modelos de resolución de problemas (FODA, Seis Sombreros, CATWDA), un mapa mental de FAANG y tarjetas de aprendizaje. SPA desplegada en Vercel.",
+        proj_repo: "Repositorio",
 
         tag_microservices: "Microservicios",
         tag_architecture: "Arquitectura",
