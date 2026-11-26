@@ -13,8 +13,10 @@
         <button id="hamburger" class="hamburger" aria-label="Menu">&#9776;</button>
         <nav id="nav-menu">
             <a href="#about" data-i18n="nav_home">Home / About</a>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
             <a href="#projects" data-i18n="nav_projects">Projects</a>
             <a href="#knowledge" data-i18n="nav_knowledge">Knowledge</a>
+            <a href="#certifications" data-i18n="nav_certifications">Certifications</a>
             <a href="#contact" data-i18n="nav_contact">Contact</a>
             <button id="theme-toggle" data-i18n="btn_theme">Toggle Theme</button>
             <button id="lang-toggle">EN / ES</button>
@@ -26,7 +28,29 @@
         <section id="about" class="about-section">
             <h2 class="section-title" data-i18n="about_title">About</h2>
             <h1 class="personal-intro">Osiel Alejandro Rubio Suárez</h1>
-            <p class="professional-intro" data-i18n="about_intro">Software Engineer specializing in backend microservices architecture, relational databases, and solid software design.</p>
+            <p class="professional-intro" data-i18n="about_intro">Full Stack Software Engineer specializing in microservices architecture and RESTful APIs with Python, FastAPI, NestJS and Angular.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <h2 class="section-title" data-i18n="experience_title">Experience</h2>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <h3 class="experience-role">Systems Specialist</h3>
+                    <p class="experience-company">Banamex</p>
+                    <p class="experience-dates" data-i18n="exp1_dates">Apr 2026 - Present</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-role">Full Stack Developer</h3>
+                    <p class="experience-company">OfficeMax</p>
+                    <p class="experience-dates" data-i18n="exp2_dates">Mar 2024 - Jan 2026</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-role">Full Stack Developer</h3>
+                    <p class="experience-company">Secopla</p>
+                    <p class="experience-dates">2023 - 2024</p>
+                </div>
+            </div>
         </section>
 
         <!-- Projects Carousel Section[cite: 2] -->
@@ -92,39 +116,39 @@
                 <!-- 9 Expandable Skill Cards[cite: 2] -->
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_backend">Backend Dev</button>
-                    <div class="skill-content">Java, Spring Boot, Hibernate, RESTful APIs.</div>
+                    <div class="skill-content">Python, FastAPI, NestJS, Django, Node.js, RESTful APIs, Swagger, JWT.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_rdb">Relational DBs</button>
-                    <div class="skill-content">PostgreSQL, Oracle Database, MySQL, SQL Server.</div>
+                    <div class="skill-content">Oracle, PostgreSQL.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_frontend">Frontend Dev</button>
-                    <div class="skill-content">Angular, Next.js, React, TypeScript, Tailwind CSS.</div>
+                    <div class="skill-content">Angular, React, TypeScript, JavaScript, Tailwind CSS.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_cloud">Cloud &amp; DevOps</button>
-                    <div class="skill-content">Docker, Git, GitHub, Maven, AWS.</div>
+                    <div class="skill-content">AWS, Docker, Kubernetes, Jenkins, GitHub Actions, CI/CD, Git, GitHub.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_arch">Architecture</button>
-                    <div class="skill-content" data-i18n="skill_arch_content">Microservices, API Gateway, Eureka, OpenFeign.</div>
+                    <div class="skill-content" data-i18n="skill_arch_content">Microservices, gRPC, Apache Kafka, SOLID, design patterns.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn">NoSQL DBs</button>
-                    <div class="skill-content" data-i18n="skill_nosql_content">MongoDB document storage and retrieval.</div>
+                    <div class="skill-content" data-i18n="skill_nosql_content">MongoDB, Redis.</div>
                 </div>
                 <div class="skill-card">
                     <button class="expand-btn" data-i18n="skill_programming">Programming</button>
-                    <div class="skill-content">Java, Python, C, TypeScript, JavaScript.</div>
+                    <div class="skill-content">JavaScript, TypeScript, Python, Java.</div>
                 </div>
                 <div class="skill-card">
-                    <button class="expand-btn" data-i18n="skill_algorithms">Algorithms</button>
-                    <div class="skill-content" data-i18n="skill_algo_content">Data structures, hash maps, two-pointer techniques.</div>
+                    <button class="expand-btn" data-i18n="skill_testing">Testing &amp; Data</button>
+                    <div class="skill-content" data-i18n="skill_testing_content">pytest, Pandas, NumPy.</div>
                 </div>
                 <div class="skill-card">
-                    <button class="expand-btn">Hardware</button>
-                    <div class="skill-content" data-i18n="skill_hw_content">ESP32 microcontrollers, Mobile Hardware Repair.</div>
+                    <button class="expand-btn" data-i18n="skill_ai">AI</button>
+                    <div class="skill-content" data-i18n="skill_ai_content">Claude, MCP, RAG, AWS Certified AI Practitioner.</div>
                 </div>
             </div>
 
@@ -132,7 +156,60 @@
             <div class="education-card">
                 <h3 class="education-title" data-i18n="edu_title">Education</h3>
                 <p class="education-institution">Universidad Autónoma de Querétaro</p>
-                <p class="education-degree" data-i18n="edu_degree">Software Engineering (Jul 2021 - Dec 2025)</p>
+                <p class="education-degree" data-i18n="edu_degree">Software Engineering (2021 - 2025)</p>
+            </div>
+        </section>
+
+        <!-- Certifications Carousel Section -->
+        <section id="certifications" class="cert-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="cert_title">Certifications</h2>
+                <div class="carousel-controls">
+                    <button id="cert-prev-btn" aria-label="Previous">&lt;</button>
+                    <button id="cert-next-btn" aria-label="Next">&gt;</button>
+                </div>
+            </div>
+            <div class="cert-carousel">
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--badge"><div data-iframe-width="270" data-iframe-height="270" data-share-badge-id="6c395c8a-e845-4117-a56c-3fa15c772341" data-share-badge-host="https://www.credly.com"></div></div>
+                    <h3 class="cert-title">AWS Certified Cloud Practitioner (CLF-C02)</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <a href="https://www.credly.com/badges/6c395c8a-e845-4117-a56c-3fa15c772341/public_url" target="_blank" rel="noopener" class="contact-btn cert-validate" data-i18n="cert_validate">Validate credential</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--badge"><div data-iframe-width="270" data-iframe-height="270" data-share-badge-id="89f3d8ff-2462-46f1-ae31-b5dc0432a0f3" data-share-badge-host="https://www.credly.com"></div></div>
+                    <h3 class="cert-title">AWS Certified AI Practitioner (AIF-C01)</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <a href="https://www.credly.com/badges/89f3d8ff-2462-46f1-ae31-b5dc0432a0f3/public_url" target="_blank" rel="noopener" class="contact-btn cert-validate" data-i18n="cert_validate">Validate credential</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--img"><img src="public/certs/jetbrains-python-apps.jpg" alt="Build and Ship Cloud-Native Python Apps certificate" loading="lazy"></div>
+                    <h3 class="cert-title">Build and Ship Cloud-Native Python Apps</h3>
+                    <p class="cert-issuer">JetBrains Academy</p>
+                    <a href="public/Build%20and%20Ship%20Cloud-Native%20Python%20Apps-certificate.pdf" target="_blank" rel="noopener" class="contact-btn cert-validate" data-i18n="cert_validate">Validate credential</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--img"><img src="public/certs/python-fundamentals.jpg" alt="Python Programming Fundamentals certificate" loading="lazy"></div>
+                    <h3 class="cert-title">Python Programming Fundamentals</h3>
+                    <p class="cert-issuer">Microsoft (Coursera)</p>
+                    <a href="https://coursera.org/share/ca00103477403bb7b060c3dcc06953bf" target="_blank" rel="noopener" class="contact-btn cert-validate" data-i18n="cert_validate">Validate credential</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--img"><img src="public/certs/ef-set.jpg" alt="EF SET English Certificate" loading="lazy"></div>
+                    <h3 class="cert-title">EF SET English Certificate (C1 Advanced)</h3>
+                    <p class="cert-issuer">EF SET</p>
+                    <a href="https://cert.efset.org/PA5fDw" target="_blank" rel="noopener" class="contact-btn cert-validate" data-i18n="cert_validate">Validate credential</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--img"><img src="public/certs/uaq-react-nestjs-aws.jpg" alt="Constancia del taller Desarrollo Web Avanzado con React, NestJS y AWS" loading="lazy"></div>
+                    <h3 class="cert-title">Desarrollo Web Avanzado con React, NestJS y AWS</h3>
+                    <p class="cert-issuer">Universidad Autónoma de Querétaro</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-credential cert-credential--img"><img src="public/certs/uaq-data-viz-python.jpg" alt="Constancia del taller Visualización de Datos con Python" loading="lazy"></div>
+                    <h3 class="cert-title">Visualización de Datos con Python</h3>
+                    <p class="cert-issuer">Universidad Autónoma de Querétaro</p>
+                </div>
             </div>
         </section>
 
@@ -140,11 +217,11 @@
         <section id="contact" class="contact-section">
             <h2 class="section-title" data-i18n="contact_title">Contact</h2>
             <div class="contact-links">
-                <a href="https://github.com" target="_blank" class="contact-btn">Github</a>
-                <a href="https://linkedin.com" target="_blank" class="contact-btn">Linkedin</a>
-                <a href="cv.pdf" download class="contact-btn" data-i18n="contact_cv">Download CV</a>
-                <a href="https://wa.me/1234567890" target="_blank" class="contact-btn" data-i18n="contact_wa">Whatsapp Message</a>
-                <a href="mailto:email@example.com" class="contact-btn" data-i18n="contact_email">mail to</a>
+                <a href="https://github.com/0siel" target="_blank" class="contact-btn">Github</a>
+                <a href="https://www.linkedin.com/in/osiel-rubio/" target="_blank" class="contact-btn">Linkedin</a>
+                <a href="public/CV_Osiel%20Alejandro%20Rubio%20Su%C3%A1rez.pdf" download class="contact-btn" data-i18n="contact_cv">Download CV</a>
+                <a href="https://wa.me/4428703447" target="_blank" class="contact-btn" data-i18n="contact_wa">Whatsapp</a>
+                <a href="mailto:osiel.rubio.suarez@gmail.com" class="contact-btn" data-i18n="contact_email">mail to</a>
             </div>
         </section>
     </main>
@@ -154,6 +231,7 @@
         <p data-i18n="footer_text">Portfolio Footer © 2026</p>
     </footer>
 
+    <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

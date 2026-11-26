@@ -5,6 +5,8 @@ const translations = {
     en: {
         // Nav
         nav_home: "About",
+        nav_experience: "Experience",
+        nav_certifications: "Certifications",
         nav_projects: "Projects",
         nav_knowledge: "Knowledge",
         nav_contact: "Contact",
@@ -12,10 +14,19 @@ const translations = {
 
         // About
         about_title: "About",
-        about_intro: "Software Engineer specializing in backend microservices architecture, relational databases, and solid software design.",
+        about_intro: "Full Stack Software Engineer specializing in microservices architecture and RESTful APIs with Python, FastAPI, NestJS and Angular.",
+
+        // Experience
+        experience_title: "Experience",
+        exp1_dates: "Apr 2026 - Present",
+        exp2_dates: "Mar 2024 - Jan 2026",
+
+        // Certifications
+        cert_title: "Certifications",
+        cert_validate: "Validate credential",
 
         // Projects
-        projects_title: "Projects Carousel",
+        projects_title: "Projects",
         btn_prev: "<",
         btn_next: ">",
 
@@ -43,16 +54,17 @@ const translations = {
         skill_frontend: "Frontend Dev",
         skill_cloud: "Cloud & DevOps",
         skill_arch: "Architecture",
-        skill_arch_content: "Microservices, API Gateway, Eureka, OpenFeign.",
-        skill_nosql_content: "MongoDB document storage and retrieval.",
+        skill_arch_content: "Microservices, gRPC, Apache Kafka, SOLID, design patterns.",
+        skill_nosql_content: "MongoDB, Redis.",
         skill_programming: "Programming",
-        skill_algorithms: "Algorithms",
-        skill_algo_content: "Data structures, hash maps, two-pointer techniques.",
-        skill_hw_content: "ESP32 microcontrollers, Mobile Hardware Repair.",
+        skill_testing: "Testing & Data",
+        skill_testing_content: "pytest, Pandas, NumPy.",
+        skill_ai: "AI",
+        skill_ai_content: "Claude, MCP, RAG, AWS Certified AI Practitioner.",
 
         // Education
         edu_title: "Education",
-        edu_degree: "Software Engineering (Jul 2021 - Dec 2025)",
+        edu_degree: "Software Engineering (2021 - 2025)",
 
         // Contact
         contact_title: "Contact",
@@ -66,6 +78,8 @@ const translations = {
     es: {
         // Nav
         nav_home: "Sobre Mí",
+        nav_experience: "Experiencia",
+        nav_certifications: "Certificaciones",
         nav_projects: "Proyectos",
         nav_knowledge: "Conocimientos",
         nav_contact: "Contacto",
@@ -73,7 +87,16 @@ const translations = {
 
         // About
         about_title: "Sobre Mí",
-        about_intro: "Ingeniero de Software especializado en arquitectura de microservicios backend, bases de datos relacionales y diseño de software basado en principios SOLID.",
+        about_intro: "Ingeniero de Software Full Stack especializado en arquitectura de microservicios y APIs RESTful con Python, FastAPI, NestJS y Angular.",
+
+        // Experience
+        experience_title: "Experiencia",
+        exp1_dates: "Abr 2026 - Actualidad",
+        exp2_dates: "Mar 2024 - Ene 2026",
+
+        // Certifications
+        cert_title: "Certificaciones",
+        cert_validate: "Validar credencial",
 
         // Projects
         projects_title: "Proyectos",
@@ -104,16 +127,17 @@ const translations = {
         skill_frontend: "Desarrollo Frontend",
         skill_cloud: "Cloud y DevOps",
         skill_arch: "Arquitectura",
-        skill_arch_content: "Microservicios, API Gateway, Eureka, OpenFeign.",
-        skill_nosql_content: "Almacenamiento y consulta de documentos en MongoDB.",
+        skill_arch_content: "Microservicios, gRPC, Apache Kafka, SOLID, patrones de diseño.",
+        skill_nosql_content: "MongoDB, Redis.",
         skill_programming: "Programación",
-        skill_algorithms: "Algoritmos",
-        skill_algo_content: "Estructuras de datos, hash maps, técnicas de dos punteros.",
-        skill_hw_content: "Microcontroladores ESP32, Reparación de Hardware Móvil.",
+        skill_testing: "Pruebas y Datos",
+        skill_testing_content: "pytest, Pandas, NumPy.",
+        skill_ai: "IA",
+        skill_ai_content: "Claude, MCP, RAG, AWS Certified AI Practitioner.",
 
         // Education
         edu_title: "Educación",
-        edu_degree: "Ingeniería de Software (Jul 2021 - Dic 2025)",
+        edu_degree: "Ingeniería de Software (2021 - 2025)",
 
         // Contact
         contact_title: "Contacto",
@@ -217,6 +241,38 @@ prevBtn.addEventListener('click', () => {
     }
     showSlide(currentSlideIndex);
 });
+
+// ======================
+// Certifications Carousel (2 per view on desktop, 1 on mobile)
+// ======================
+const certCards = document.querySelectorAll('.cert-card');
+let certStart = 0;
+
+function certPerView() {
+    return window.innerWidth > 768 ? 2 : 1;
+}
+
+function renderCerts() {
+    const n = certCards.length;
+    const visible = Math.min(certPerView(), n);
+    certCards.forEach(card => card.classList.remove('visible'));
+    for (let k = 0; k < visible; k++) {
+        certCards[(certStart + k) % n].classList.add('visible');
+    }
+}
+
+document.getElementById('cert-next-btn').addEventListener('click', () => {
+    certStart = (certStart + 1) % certCards.length;
+    renderCerts();
+});
+
+document.getElementById('cert-prev-btn').addEventListener('click', () => {
+    certStart = (certStart - 1 + certCards.length) % certCards.length;
+    renderCerts();
+});
+
+window.addEventListener('resize', renderCerts);
+renderCerts();
 
 // ======================
 // Hamburger Menu (Mobile)
